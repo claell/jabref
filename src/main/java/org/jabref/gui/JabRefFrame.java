@@ -513,8 +513,8 @@ public class JabRefFrame extends BorderPane {
                 new Separator(Orientation.VERTICAL),
 
                 new HBox(
-                        factory.createIconButton(StandardActions.UNDO, new UndoRedoAction(StandardActions.UNDO, this, dialogService, stateManager)),
-                        factory.createIconButton(StandardActions.REDO, new UndoRedoAction(StandardActions.REDO, this, dialogService, stateManager)),
+                        factory.createIconButton(StandardActions.UNDO, new UndoRedoAction(StandardActions.UNDO, this, dialogService, stateManager, undoManager)),
+                        factory.createIconButton(StandardActions.REDO, new UndoRedoAction(StandardActions.REDO, this, dialogService, stateManager, undoManager)),
                         factory.createIconButton(StandardActions.CUT, new EditAction(StandardActions.CUT, this, stateManager)),
                         factory.createIconButton(StandardActions.COPY, new EditAction(StandardActions.COPY, this, stateManager)),
                         factory.createIconButton(StandardActions.PASTE, new EditAction(StandardActions.PASTE, this, stateManager))),
@@ -724,8 +724,8 @@ public class JabRefFrame extends BorderPane {
                 factory.createMenuItem(StandardActions.QUIT, new CloseAction()));
 
         edit.getItems().addAll(
-                factory.createMenuItem(StandardActions.UNDO, new UndoRedoAction(StandardActions.UNDO, this, dialogService, stateManager)),
-                factory.createMenuItem(StandardActions.REDO, new UndoRedoAction(StandardActions.REDO, this, dialogService, stateManager)),
+                factory.createMenuItem(StandardActions.UNDO, new UndoRedoAction(StandardActions.UNDO, this, dialogService, stateManager, undoManager)),
+                factory.createMenuItem(StandardActions.REDO, new UndoRedoAction(StandardActions.REDO, this, dialogService, stateManager, undoManager)),
 
                 new SeparatorMenuItem(),
 
